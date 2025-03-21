@@ -3,11 +3,13 @@ import axios from "axios";
 const API_URL = "http://localhost:5000/usuarios"
 
 export interface Usuario{
-    id?: string | number;
-    nome: string,
-    sobrenome: string,
-    email : string,
-    cpf: string
+    id?: string | number
+    nome: string
+    sobrenome: string
+    email : string
+    telefone: string
+    login: string
+    senha: string
 }
 
 export const getUsuarios = async () => {
