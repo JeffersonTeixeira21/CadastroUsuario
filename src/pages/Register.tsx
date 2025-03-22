@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { addUsuario } from "../api";
 
 function Register() {
     const [nome, setNome] = useState("");
@@ -8,10 +9,25 @@ function Register() {
     const [login, setLogin] = useState("");
     const [senha, setSenha] = useState("");
     const [confirmaSenha, setConfirmaSenha] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false)
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true)
+        try {
+            const usuario = {
+                nome, sobrenome, email, telefone, login, senha
+            }   
+            await addUsuario(usuario)
+        } catch (error) {
+            console.log("Erro ao adicionar o usuário", error)
+            setIsSubmitting(false)
+        }
+    };
 
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
-            <form className="bg-white p-6 rounded shadow-lg w-full max-w-md">
+            <form className="bg-white p-6 rounded shadow-lg w-full max-w-md" onSubmit={handleSubmit}>
                 <div>
                     <label>Nome:</label>
                     <input
@@ -88,6 +104,12 @@ function Register() {
                         onChange={(e) => setConfirmaSenha(e.target.value)}
                     />
                 </div>
+
+                <button className="ml-2 p-1 bg-blue-900 text-white rounded mt-4" type="submit"
+                    disabled={isSubmitting} >
+                    {isSubmitting ? "Cadastrando .... " : "Cadastrar"}
+                </button>
+                
             </form>
         </div>
 

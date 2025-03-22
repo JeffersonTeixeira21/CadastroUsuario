@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "nome": "Teste",
+      "sobrenome": "Teste",
+      "email": "teste@gmail.com",
+      "telefone": "479999999",
+      "login": "teste",
+      "senha": "teste",
+      "id": 1
+    },
+    {
+      "nome": "Jefferson",
+      "sobrenome": "Teixeira",
+      "email": "jeffteixeira200416@gmail.com",
+      "telefone": "47988503987",
+      "login": "login",
+      "senha": "senha",
+      "id": 2
+    }
+  ]
+}
