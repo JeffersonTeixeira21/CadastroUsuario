@@ -8,15 +8,6 @@
       "login": "teste",
       "senha": "teste",
       "id": 1
-    },
-    {
-      "nome": "Jefferson",
-      "sobrenome": "Teixeira",
-      "email": "jeffteixeira200416@gmail.com",
-      "telefone": "47988503987",
-      "login": "login",
-      "senha": "senha",
-      "id": 2
     }
   ]
 }
