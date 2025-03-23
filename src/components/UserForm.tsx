@@ -2,7 +2,6 @@ import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { userSchema } from "../validations/validationSchema";
 import { Usuario } from "../api";
-//import InputMask from "react-input-mask"
 import MaskedInput from 'react-text-mask';
 
 interface UserFormProps {
