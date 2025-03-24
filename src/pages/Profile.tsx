@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FaEdit, FaTrash, FaSave, FaTimes } from "react-icons/fa";
 import { getUsuarios, deleteUsuario, updateUsuario, Usuario } from '../api';
 
 const Profile = () => {
@@ -136,15 +137,17 @@ const Profile = () => {
                     </div>
                     <div className="flex justify-end space-x-4 mt-4">
                         <button
-                            className="bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition"
+                            className="bg-blue-600 text-white p-1 rounded-md hover:bg-blue-700 transition"
                             onClick={handleUpdate}
                         >
+                          <FaSave className="mr-1" />
                             Atualizar
                         </button>
                         <button
-                            className="bg-gray-500 text-white p-3 rounded-md hover:bg-gray-600 transition"
+                            className="bg-gray-500 text-white p-1 rounded-md hover:bg-gray-600 transition"
                             onClick={() => setEditingUsuario(null)}
                         >
+                          <FaTimes className="mr-1" />
                             Cancelar
                         </button>
                     </div>
@@ -173,15 +176,17 @@ const Profile = () => {
                                 <td className="border-b border-gray-300 p-3">{usuario.login}</td>
                                 <td className="border-b border-gray-300 p-3">
                                     <button
-                                        className="bg-yellow-500 text-white p-2 rounded-md mr-2 hover:bg-yellow-600"
+                                        className="bg-yellow-500 text-white text-center p-1 rounded-md mr-1 hover:bg-yellow-600"
                                         onClick={() => handleEdit(usuario.id)}
                                     >
+                                      <FaEdit className="mr-1" />
                                         Editar
                                     </button>
                                     <button
-                                        className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600"
+                                        className="bg-red-500 text-white p-1 rounded-md hover:bg-red-600"
                                         onClick={() => handleDelete(usuario.id)}
                                     >
+                                      <FaTrash className="mr-1" />
                                         Excluir
                                     </button>
                                 </td>
