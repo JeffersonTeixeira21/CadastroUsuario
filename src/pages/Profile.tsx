@@ -19,7 +19,6 @@ const Profile = () => {
         setUsuarios(data);
     };
 
-    // Função para excluir um usuário
     const handleDelete = async (id: string | number | undefined) => {
         try {
             if (!id) {
