@@ -84,7 +84,7 @@ const Profile = () => {
 
             {editingUsuario && (
                 <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
-                    <h2 className="text-2xl font-semibold text-blue-500 mb-4">Editando: {editingUsuario.nome}</h2>
+                    <h2 className="text-2xl font-semibold text-blue-500 mb-4">Editando: {editingUsuario.nome} {editingUsuario.sobrenome}</h2>
                     <div className="space-y-4">
                         <input
                             type="text"
